@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <meta name="description" content="Explore Earth locations with environmental characteristics analogous to Mars." />
+  <title>TerraMatch — Earth to Mars Analog Explorer</title>
+  <link rel="stylesheet" href="css/site.css" />
+  <script src="https://unpkg.com/globe.gl@2.45.0/dist/globe.gl.min.js"></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top"><span class="brand-mark">T</span><span><b>TERRAMATCH</b><small>EARTH–MARS ANALOG EXPLORER</small></span></a>
+    <nav><a href="#explore">Explore</a><a href="#comparison">Compare</a><a href="#method">Methodology</a></nav>
+    <span class="live-pill"><i></i> INTERACTIVE WEB EDITION</span>
+  </header>
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy"><p class="eyebrow">NASA SPACE APPS · INTERSESHLLAR</p><h1>Find Earth.<br><em>Think beyond it.</em></h1><p class="lede">Explore terrestrial environments that resemble Mars. Compare climate, surface materials, atmospheric conditions, moisture, and radiation against the Curiosity rover's Gale Crater baseline.</p><a class="primary" href="#explore">Start exploring <span>↗</span></a></div>
+      <div class="hero-stats"><div><b>5</b><span>science domains</span></div><div><b>4</b><span>Earth analog sites</span></div><div><b>2015–25</b><span>NASA POWER archive</span></div></div>
+    </section>
+
+    <section class="explorer" id="explore">
+      <div class="section-head"><div><p class="eyebrow">01 / PLANETARY EXPLORER</p><h2>Explore the analogs</h2></div><div class="planet-switch"><button class="active" data-planet="Earth">Earth</button><button data-planet="Mars">Mars</button></div></div>
+      <div class="explorer-grid">
+        <div class="globe-panel"><div class="globe-top"><span id="globe-label">EARTH · ANALOG LOCATIONS</span><span class="drag-hint">DRAG TO ROTATE · SCROLL TO ZOOM</span></div><div id="globeViz" aria-label="Interactive 3D planet globe"></div><div class="globe-legend"><span><i class="dot earth-dot"></i> Earth analog</span><span><i class="dot mars-dot"></i> Gale Crater baseline</span><span>Click a marker to inspect</span></div></div>
+        <aside class="site-panel"><div class="panel-kicker">SELECT A LOCATION</div><div id="site-list" class="site-list"></div><div class="selected-card" id="selected-card"></div></aside>
+      </div>
+    </section>
+
+    <section class="comparison" id="comparison">
+      <div class="section-head"><div><p class="eyebrow">02 / MULTI-CRITERIA DECISION MATRIX</p><h2>Compare environments</h2><p class="section-sub">Adjust the importance of each science domain. The weighted score updates instantly using the project's precomputed category scores.</p></div><div class="score-summary"><span>WEIGHTED ANALOG SCORE</span><b id="overall-score">—</b></div></div>
+      <div class="compare-grid"><div class="weights-card"><div class="card-title"><h3>Decision weights</h3><button id="reset-weights" class="text-btn">Reset to equal</button></div><div id="weight-controls"></div><p class="weight-total">TOTAL WEIGHT <b id="weight-total">100%</b></p></div><div class="scores-card"><div class="card-title"><h3>Category similarity</h3><span class="muted" id="score-site-name">Selected site</span></div><div id="category-scores"></div><div class="score-footnote">Scores shown are from the repository's precomputed comparison dataset. Gale Crater is the 100% reference baseline.</div></div></div>
+    </section>
+
+    <section class="method" id="method"><p class="eyebrow">03 / HOW IT WORKS</p><h2>From planetary data to analog discovery.</h2><div class="method-grid"><article><span>01</span><h3>Gather</h3><p>Compare Mars Curiosity REMS baseline data with Earth environmental datasets, including NASA POWER climatology and surface-material information.</p></article><article><span>02</span><h3>Normalize</h3><p>Measure the difference between Earth and Mars variables against selected tolerances, keeping unlike units on comparable scales.</p></article><article><span>03</span><h3>Rank</h3><p>Combine category similarities using adjustable weights to create an overall multi-criteria analog score.</p></article></div><p class="method-note">This browser edition is an independent web interface built from the repository's existing site metadata and precomputed scores. It does not connect to a running OpenSpace instance.</p></section>
+  </main>
+  <footer><span>© InterSESHllar · TerraMatch</span><span>Built for exploration, research, and planetary analog discovery.</span></footer>
+  <script src="js/team-data.js"></script><script src="js/site.js"></script>
+</body>
+</html>
