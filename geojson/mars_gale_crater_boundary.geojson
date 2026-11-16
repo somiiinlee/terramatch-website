@@ -1,0 +1,40 @@
+{
+  "type": "FeatureCollection",
+  "name": "MarsGaleCraterBoundary",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "Name": "Gale Crater Rim",
+        "Description": "154 km diameter impact crater hosting Mount Sharp (Aeolis Mons) and NASA Curiosity Rover landing site.",
+        "Color": [1.0, 0.45, 0.15],
+        "FillColor": [0.85, 0.35, 0.1, 0.25],
+        "Opacity": 0.9
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [137.40, -3.60],
+            [137.78, -3.68],
+            [138.11, -3.90],
+            [138.32, -4.22],
+            [138.40, -4.60],
+            [138.32, -4.98],
+            [138.11, -5.30],
+            [137.78, -5.52],
+            [137.40, -5.60],
+            [137.02, -5.52],
+            [136.69, -5.30],
+            [136.48, -4.98],
+            [136.40, -4.60],
+            [136.48, -4.22],
+            [136.69, -3.90],
+            [137.02, -3.68],
+            [137.40, -3.60]
+          ]
+        ]
+      }
+    }
+  ]
+}
